@@ -27,10 +27,12 @@
     "chart.js": "^2.1.6",
     "chartist": "^0.9.8",
     "font-awesome": "^4.6.3",
+    "socket.io": "^1.7.2",
     "vue": "^2.1.4",
     "vue-loader": "^10.0.2",
     "vue-resource": "^1.0.3",
-    "vue-router": "^2.1.1"
+    "vue-router": "^2.1.1",
+    "vue-socket.io": "^2.0.1"
   },
   "devDependencies": {
     "babel-core": "^6.0.0",

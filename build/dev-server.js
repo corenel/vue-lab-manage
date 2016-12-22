@@ -6,6 +6,7 @@ var proxyMiddleware = require('http-proxy-middleware')
 var webpackConfig = process.env.NODE_ENV === 'testing'
   ? require('./webpack.prod.conf')
   : require('./webpack.dev.conf')
+var io = require('socket.io')(1234)
 
 // default port where dev server listens for incoming traffic
 var port = process.env.PORT || config.dev.port
@@ -59,4 +60,17 @@ module.exports = app.listen(port, function (err) {
     return
   }
   console.log('Listening at http://localhost:' + port + '\n')
+})
+
+// Socket.io communication
+io.on('connection', function (socket) {
+    io.emit('asda', {will: 'be received by everyone'})
+
+    socket.on('private message', function (from, msg) {
+        console.log('[Socket] I received a private message by ', from, ' saying ', msg)
+    })
+
+    socket.on('disconnect', function () {
+        io.emit('user disconnected')
+    })
 })

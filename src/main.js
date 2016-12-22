@@ -1,10 +1,13 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import VueSocketio from 'vue-socket.io'
 
 import App from './Desktop'
 import {menu} from './config'
 
 Vue.use(VueRouter)
+
+Vue.use(VueSocketio, 'localhost:1234')
 
 let routes = menu.map(function (item) {
     return item
