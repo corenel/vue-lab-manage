@@ -1,0 +1,48 @@
+@import "../../base/fn";
+
+
+.#{$weui_ns}panel {
+    background-color: #FFFFFF;
+    margin-top: 10px;
+    &:first-child {
+        margin-top: 0;
+    }
+
+    position: relative;
+    overflow: hidden;
+    &:before {
+        @include setTopLine($weuiLineColorLight);
+    }
+    &:after {
+        @include setBottomLine($weuiLineColorLight);
+    }
+}
+
+.#{$weui_ns}panel_hd {
+    padding: 14px 15px 10px;
+    color: $weuiTextColorGray;
+    font-size: 13px;
+    position: relative;
+    &:after {
+        @include setBottomLine($weuiLineColorLight);
+        left: 15px;
+    }
+}
+
+.#{$weui_ns}panel_ft {
+    padding: 10px 15px 12px;
+    color: #999999;
+    font-size: 14px;
+    position: relative;
+}
+
+.#{$weui_ns}panel_access
+{
+    .#{$weui_ns}panel_ft {
+        display: block;
+        color: #586C94;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+}
+
+
