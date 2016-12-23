@@ -69,15 +69,15 @@ console.log('[Socket] Listening at http://localhost:1234')
 
 matlabServer.on('connection', function (socket) {
     socket.on('fromMatlab', function (data) {
-        console.log('[Socket] Matlab saying:', data)
+        console.log('[Socket][Matlab]', data)
         webClient.emit('fromMatlab', data)
     })
 })
 
 webClient.on('connection', function (socket) {
-    socket.on('toMatlab', function (from, msg) {
-        console.log('[Socket]', from, 'saying:', msg)
-        matlabServer.emit('toMatlab', from + ' saying: ' + msg)
+    socket.on('toMatlab', function (data) {
+        console.log('[Socket][Web Client]', data)
+        matlabServer.emit('toMatlab', data)
     })
 })
 
