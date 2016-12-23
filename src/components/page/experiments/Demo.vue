@@ -5,6 +5,7 @@
         <p>{{ msg }}</p>
         <input v-model="msg">
         <button v-on:click="clickButton()">send message</button>
+        <p>{{ receivecMsg }}</p>
     </div>
 </template>
 <style>
@@ -14,7 +15,8 @@
         data () {
             return {
                 name: 'Vue',
-                msg: 'hello vue'
+                msg: 'hello vue',
+                receivecMsg: ''
             }
         },
         components: {
@@ -23,14 +25,16 @@
             connect: function () {
                 console.log('socket connected')
             },
-            asda: function (val) {
-                console.log('this method fired by socket server. eg: io.emit("customEmit", data)')
+            fromMatlab: function (data) {
+                if (data !== null) {
+                    this.receivecMsg = data
+                }
             }
         },
         methods: {
             clickButton: function () {
                 // $socket is socket.io-client instance
-                this.$socket.emit('private message', this.name, this.msg)
+                this.$socket.emit('toMatlab', this.name, this.msg)
             }
         }
     }

@@ -7,6 +7,8 @@ var webpackConfig = process.env.NODE_ENV === 'testing'
   ? require('./webpack.prod.conf')
   : require('./webpack.dev.conf')
 var io = require('socket.io')(1234)
+var matlabServer = io.of('/matlab')
+var webClient = io.of('/client')
 
 // default port where dev server listens for incoming traffic
 var port = process.env.PORT || config.dev.port
@@ -59,18 +61,30 @@ module.exports = app.listen(port, function (err) {
     console.log(err)
     return
   }
-  console.log('Listening at http://localhost:' + port + '\n')
+  console.log('[Web] Listening at http://localhost:' + port)
 })
 
-// Socket.io communication
+// Socket.io communication between server and client
+console.log('[Socket] Listening at http://localhost:1234')
+
+matlabServer.on('connection', function (socket) {
+    socket.on('fromMatlab', function (data) {
+        console.log('[Socket] Matlab saying:', data)
+        webClient.emit('fromMatlab', data)
+    })
+})
+
+webClient.on('connection', function (socket) {
+    socket.on('toMatlab', function (from, msg) {
+        console.log('[Socket]', from, 'saying:', msg)
+        matlabServer.emit('toMatlab', from + ' saying: ' + msg)
+    })
+})
+
 io.on('connection', function (socket) {
-    io.emit('asda', {will: 'be received by everyone'})
-
-    socket.on('private message', function (from, msg) {
-        console.log('[Socket] I received a private message by ', from, ' saying ', msg)
-    })
-
+    console.log('[Socket] user connected: ' + socket.id)
     socket.on('disconnect', function () {
-        io.emit('user disconnected')
+        console.log('[Socket] user disconnected: ' + socket.id)
     })
 })
+

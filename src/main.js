@@ -7,7 +7,7 @@ import {menu} from './config'
 
 Vue.use(VueRouter)
 
-Vue.use(VueSocketio, 'localhost:1234')
+Vue.use(VueSocketio, 'localhost:1234/client')
 
 let routes = menu.map(function (item) {
     return item
