@@ -2,11 +2,11 @@
     <section class="section">
         <h1 class="title">Simulation</h1>
         <h3 class="subtitle">Simulate in Matlab and plot figure here.</h3>
-        <hr>
+        <!--<hr>-->
         <div class="columns">
             <div class="column">
                 <div class="box">
-                    <tab :active-index = "1" style= "width: 100%; height: 610px;">
+                    <tab :active-index = "1" style= "width: 100%; max-height: 650px;">
                         <tab-item title="Single Tank">
                             That's single tank simulation.
                         </tab-item>
@@ -46,9 +46,12 @@
         <div class="columns">
             <div class="column">
                 <div class="box">
-                    <tab :active-index = "1" style= "width: 100%; height: 400px">
+                    <tab :active-index = "0" style= "width: 100%;">
                         <tab-item title="Chart">
-                            <chart :type = "'line'" :data = "chartData" :options = "charOptions"></chart>
+                            <chart :type = "'line'"
+                                   :data = "chartData"
+                                   :options = "chartOptions"
+                                   :isChanged = 'chartChanged'></chart>
                         </tab-item>
                         <tab-item title="Data">
                             <table class="table is-bordered is-striped is-narrow">
@@ -81,12 +84,21 @@
         data () {
             return {
                 receivedMsg: '',
-                receivedChart: [],
                 chartLabels: ['level_1', 'level_2'],
+                chartData: {datasets: []},
                 chartColors: {
-                    'level_1': '75, 192, 192',
-                    'level_2': '54, 162, 235'
+                    'level_1': '220, 220, 220',
+                    'level_2': '151, 187, 205'
                 },
+                chartOptions: {
+                    scales: {
+                        xAxes: [{
+                            type: 'linear',
+                            position: 'bottom'
+                        }]
+                    }
+                },
+                chartChanged: false,
                 params: {
                     mdl: {
                         name: 'Model',
@@ -153,6 +165,8 @@
                     }
                     if (this.receivedMsg['type'] === 'chart') {
                         document.getElementById('startSim').classList.remove('is-loading')
+                        this.chartChanged = !this.chartChanged
+                        // Reformat data for each label in this.chartLabels
                         this.chartLabels.forEach(function (y) {
                             let x = 'time'
                             let reData = {
@@ -160,7 +174,7 @@
                                 data: [],
                                 fill: true,
                                 lineTension: 0.1,
-                                backgroundColor: 'rgba(' + that.chartColors[y] + ',0.4)',
+                                backgroundColor: 'rgba(' + that.chartColors[y] + ',0.2)',
                                 borderColor: 'rgba(' + that.chartColors[y] + ',1)',
                                 borderCapStyle: 'butt',
                                 borderDash: [],
@@ -176,23 +190,28 @@
                                 pointRadius: 1,
                                 pointHitRadius: 10
                             }
+                            // Put time and value into reData
                             for (let i = 0; i < that.receivedMsg[x].length; i++) {
                                 reData.data.push({
                                     x: that.receivedMsg[x][i][0],
                                     y: that.receivedMsg[y][i][0]
                                 })
                             }
-
-                            let elementPos = that.receivedChart.map(function (obj) {
+                            // If that.chartData.datasets have this reData before, just update it
+                            // Otherwise push new one
+                            let elementPos = that.chartData.datasets.map(function (obj) {
                                 return obj.label
                             }).indexOf(y)
                             if (elementPos !== -1) {
-                                that.receivedChart[elementPos] = reData
+                                that.chartData.datasets[elementPos] = reData
                             } else {
-                                that.receivedChart.push(reData)
+                                that.chartData.datasets.push(reData)
                             }
                         })
                         console.log(this.receivedMsg)
+                    } else if (this.receivedMsg['type'] === 'params' &&
+                        this.receivedMsg['status'] === 'success') {
+                        document.getElementById('setParams').classList.remove('is-loading')
                     }
                 }
             }
@@ -206,7 +225,7 @@
                 }))
             },
             setParams: function () {
-//                document.getElementById('setParams').classList.add('is-loading')
+                document.getElementById('setParams').classList.add('is-loading')
                 console.log('a1')
                 this.$socket.emit('toMatlab', JSON.stringify({
                     name: 'params',
@@ -215,24 +234,6 @@
             }
         },
         computed: {
-            chartData () {
-                return {
-                    datasets: this.receivedChart
-                }
-            },
-            charOptions () {
-                return {
-//                    legend: {
-//                        display: true
-//                    },
-                    scales: {
-                        xAxes: [{
-                            type: 'linear',
-                            position: 'bottom'
-                        }]
-                    }
-                }
-            },
             tableData () {
                 let tmpData = []
                 let that = this

@@ -40,6 +40,12 @@
                 default () {
                     return {}
                 }
+            },
+            isChanged: {
+                type: Boolean,
+                default () {
+                    return false
+                }
             }
         },
         mounted () {
@@ -65,7 +71,17 @@
                         this.chart.update()
                     })
                 },
-                deep: true
+                deep: true,
+                immediate: true
+            },
+            // A workaround for updating chart when chartData changes
+            isChanged: {
+                handler: function (val, oldVal) {
+                    this.$nextTick(function () {
+//                        console.log('changed!')
+                        this.chart.update()
+                    })
+                }
             }
         }
     }
