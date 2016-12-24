@@ -45,6 +45,12 @@ let menu = [
                 name: 'demo',
                 label: 'Demo',
                 component: makeComponent('./components/page/experiments/Demo.vue')
+            },
+            {
+                path: '/experiments/simulation',
+                name: 'simulation',
+                label: 'Simulation',
+                component: makeComponent('./components/page/experiments/Simulation.vue')
             }
         ]
     }

@@ -1,9 +1,9 @@
 <template>
         <div class="tabs">
             <ul class="tab-headers">
-                <li v-for = "item in items"
-                :class = "{'is-active': ($index === activeIndex)}"
-                @click="onClick($index)"><a>{{item.title}}</a></li>
+                <li v-for = "(item, index) in items"
+                :class = "{'is-active': (index === activeIndex)}"
+                @click="onClick(index)"><a>{{item.title}}</a></li>
             </ul>
             <div class="tab-items">
                 <slot></slot>
@@ -54,8 +54,8 @@
         methods: {
             onClick (index) {
                 this.activeIndex = index
-                this.$children[index].show = true
-                this.$broadcast('change', index)
+//                this.$children[index].show = true
+//                this.$broadcast('change', index)
             }
         }
     }
