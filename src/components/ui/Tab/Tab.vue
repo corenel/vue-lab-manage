@@ -27,6 +27,8 @@
     .tab-items {
         flex-grow: 1;
         padding: 15px;
+        max-height: 90% !important;
+        overflow-y: scroll;
     }
 </style>
 <script>
