@@ -11,30 +11,44 @@
                             That's single tank simulation.
                         </tab-item>
                         <tab-item title="Couple Tank">
-                            <table class="table is-bordered is-striped is-narrow">
-                                <thead>
-                                <tr>
-                                    <th> Parameters </th>
-                                    <th> Value</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr v-for="(item, index) in params">
-                                    <td>{{ item.name }}</td>
-                                    <td>
-                                        <p class="control">
-                                            <input v-model="item.value" class="input" placeholder="Input a value">
-                                        </p>
-                                    </td>
-                                </tr>
-                                </tbody>
-                            </table>
-                            <button id="setParams"
-                                    v-on:click="setParams()"
-                                    class="button is-success">Set</button>
+                            <p>That's couple tank simulation.</p>
+                            <p>That's couple tank simulation.</p>
+                            <p>That's couple tank simulation.</p>
+                            <p>That's couple tank simulation.</p>
                             <button id="startSim"
                                     v-on:click="startSim()"
                                     class="button is-danger">Start</button>
+                            <button id="show-modal"
+                                    v-on:click="showModal = true"
+                                    class="button is-info">Params</button>
+                            <modal v-if="showModal" @close="showModal = false">
+                                <h1 slot="header">Params Panel</h1>
+                                <table slot="body" class="table is-bordered is-striped is-narrow">
+                                    <thead>
+                                    <tr>
+                                        <th> Parameters </th>
+                                        <th> Value</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr v-for="(item, index) in params">
+                                        <td>{{ item.name }}</td>
+                                        <td>
+                                            <p class="control">
+                                                <input v-model="item.value" class="input" placeholder="Input a value">
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <div slot="footer">
+                                    <button id="setParams"
+                                            v-on:click="setParams()"
+                                            class="button is-success">Set</button>
+                                    <button v-on:click="closeModal()"
+                                            class="button is-info">Close</button>
+                                </div>
+                            </modal>
                         </tab-item>
                         <tab-item title="Quad Tank">
                             That's quad tank simulation.
@@ -47,7 +61,7 @@
             <div class="column">
                 <div class="box">
                     <tab :active-index = "0" style= "width: 100%;">
-                        <tab-item title="Chart">
+                        <tab-item title="Chart" style="max-width: 700px;">
                             <chart :type = "'line'"
                                    :data = "chartData"
                                    :options = "chartOptions"
@@ -80,6 +94,7 @@
 <script>
     import Chart from '../../ui/Chart.vue'
     import {Tab, TabItem} from '../../ui/Tab'
+    import Modal from '../../ui/Modal/Modal.vue'
     export default{
         data () {
             return {
@@ -140,13 +155,15 @@
                         name: 'Kff_2',
                         value: '1'
                     }
-                }
+                },
+                showModal: false
             }
         },
         components: {
             Chart,
             Tab,
-            TabItem
+            TabItem,
+            Modal
         },
         sockets: {
             connect: function () {
@@ -231,6 +248,9 @@
                     name: 'params',
                     data: this.params
                 }))
+            },
+            closeModal: function () {
+                this.showModal = false
             }
         },
         computed: {
