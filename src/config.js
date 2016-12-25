@@ -16,7 +16,7 @@ let menu = [
         path: '/introduction',
         name: 'introduction',
         label: 'Introduction',
-        icon: 'cog',
+        icon: 'file-text',
         isShowSubMenu: false,
         component: {
             template: '<router-view></router-view>'
@@ -40,17 +40,29 @@ let menu = [
             template: '<router-view></router-view>'
         },
         children: [
+            // {
+            //     path: '/experiments/demo',
+            //     name: 'demo',
+            //     label: 'Demo',
+            //     component: makeComponent('./components/page/experiments/Demo.vue')
+            // },
             {
-                path: '/experiments/demo',
-                name: 'demo',
-                label: 'Demo',
-                component: makeComponent('./components/page/experiments/Demo.vue')
+                path: '/experiments/model',
+                name: 'model',
+                label: 'Model',
+                component: makeComponent('./components/page/experiments/Model.vue')
             },
             {
                 path: '/experiments/simulation',
                 name: 'simulation',
                 label: 'Simulation',
                 component: makeComponent('./components/page/experiments/Simulation.vue')
+            },
+            {
+                path: '/experiments/real-plant',
+                name: 'real-plant',
+                label: 'Real Plant',
+                component: makeComponent('./components/page/experiments/Real-Plant.vue')
             }
         ]
     }

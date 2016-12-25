@@ -14,10 +14,6 @@
                             <p>That's couple tank simulation.</p>
                             <p>That's couple tank simulation.</p>
                             <p>That's couple tank simulation.</p>
-                            <p>That's couple tank simulation.</p>
-                            <button id="startSim"
-                                    v-on:click="startSim()"
-                                    class="button is-danger">Start</button>
                             <button id="show-modal"
                                     v-on:click="showModal = true"
                                     class="button is-info">Params</button>
@@ -49,6 +45,9 @@
                                             class="button is-info">Close</button>
                                 </div>
                             </modal>
+                            <button id="startSim"
+                                    v-on:click="startSim()"
+                                    class="button is-danger">Start</button>
                         </tab-item>
                         <tab-item title="Quad Tank">
                             That's quad tank simulation.
@@ -90,6 +89,12 @@
     </section>
 </template>
 <style>
+    #show-modal {
+        margin: 10px 0;
+    }
+    #startSim {
+        margin: 10px 0;
+    }
 </style>
 <script>
     import Chart from '../../ui/Chart.vue'

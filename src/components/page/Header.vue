@@ -6,7 +6,7 @@
             </a>
         </div>
         <div class="nav-center">
-            <h1>Lab Manage</h1>
+            <h1>Lab Management</h1>
         </div>
         <div id="nav-menu" class="nav-right nav-menu">
             <a class="nav-item" v-show="user.id">
