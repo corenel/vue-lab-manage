@@ -6,33 +6,14 @@
             </a>
         </div>
         <div class="nav-center">
-
+            <h1>Lab Manage</h1>
         </div>
         <div id="nav-menu" class="nav-right nav-menu">
-
-            <a class="nav-item">
-                <span>Hi, Yusu!</span>
-                <span class="tag is-small">logout</span>
+            <a class="nav-item" v-show="user.id">
+                <span>Hi, {{ user.name }}</span>
+                <span class="tag is-small"
+                      v-on:click="submit">logout</span>
             </a>
-
-
-            <!--<span class="nav-item">-->
-                <!--<a class="button is-outlined" data-social-network="Twitter" data-social-action="tweet"-->
-                     <!--data-social-target="http://bulma.io/"-->
-                     <!--href="https://twitter.com/intent/tweet?text=Bulma: a modern CSS framework based on Flebox&amp;url=http://bulma.io/&amp;via=jgthms">-->
-                     <!--<span class="icon">-->
-                        <!--<i class="fa fa-twitter"></i>-->
-                      <!--</span>-->
-                      <!--<span>Tweet</span>-->
-                <!--</a>-->
-                <!--<a class="button is-primary" >-->
-                    <!--<span class="icon">-->
-                        <!--<i class="fa fa-download"></i>-->
-                    <!--</span>-->
-                  <!--<span>Download</span>-->
-                <!--</a>-->
-          <!--</span>-->
-
         </div>
     </nav>
 </template>
@@ -47,9 +28,18 @@
     }
 </style>
 <script>
-    export default{
-        data () {
-            return {}
-        }
+    import { mapState, mapActions } from 'vuex'
+    import { USER_SIGNOUT } from '../../store/user'
+    export default {
+        methods: {
+            ...mapActions([USER_SIGNOUT]),
+            submit () {
+                this.USER_SIGNOUT()
+                this.$router.replace({ path: '/login' })
+            }
+        },
+        computed: mapState({
+            user: state => state.user
+        })
     }
 </script>
