@@ -147,65 +147,61 @@
             connect: function () {
                 console.log('socket connected')
             },
-            fromMatlab: function (data) {
-//                console.log(data)
-                if (data !== null) {
-                    let that = this
-                    try {
-                        this.receivedMsg = JSON.parse(data)
-                    } catch (err) {
-//                        console.log(data)
-                        console.log(err)
-                        document.getElementById('startSim').classList.remove('is-loading')
+            chart: function (data) {
+                let that = this
+                this.receivedMsg = data
+                // Set loading
+                document.getElementById('startSim').classList.remove('is-loading')
+                // Update chart
+                this.chartChanged = !this.chartChanged
+                // Reformat data for each label in this.chartLabels
+                this.chartLabels.forEach(function (y) {
+                    let x = 'time'
+                    let reData = {
+                        label: y,
+                        data: [],
+                        fill: true,
+                        lineTension: 0.1,
+                        backgroundColor: 'rgba(' + that.chartColors[y] + ',0.2)',
+                        borderColor: 'rgba(' + that.chartColors[y] + ',1)',
+                        borderCapStyle: 'butt',
+                        borderDash: [],
+                        borderDashOffset: 0.0,
+                        borderJoinStyle: 'miter',
+                        pointBorderColor: 'rgba(' + that.chartColors[y] + ',1)',
+                        pointBackgroundColor: '#fff',
+                        pointBorderWidth: 1,
+                        pointHoverRadius: 5,
+                        pointHoverBackgroundColor: 'rgba(' + that.chartColors[y] + ',1)',
+                        pointHoverBorderColor: 'rgba(220,220,220,1)',
+                        pointHoverBorderWidth: 2,
+                        pointRadius: 1,
+                        pointHitRadius: 10
                     }
-                    if (this.receivedMsg['type'] === 'chart') {
-                        document.getElementById('startSim').classList.remove('is-loading')
-                        this.chartChanged = !this.chartChanged
-                        // Reformat data for each label in this.chartLabels
-                        this.chartLabels.forEach(function (y) {
-                            let x = 'time'
-                            let reData = {
-                                label: y,
-                                data: [],
-                                fill: true,
-                                lineTension: 0.1,
-                                backgroundColor: 'rgba(' + that.chartColors[y] + ',0.2)',
-                                borderColor: 'rgba(' + that.chartColors[y] + ',1)',
-                                borderCapStyle: 'butt',
-                                borderDash: [],
-                                borderDashOffset: 0.0,
-                                borderJoinStyle: 'miter',
-                                pointBorderColor: 'rgba(' + that.chartColors[y] + ',1)',
-                                pointBackgroundColor: '#fff',
-                                pointBorderWidth: 1,
-                                pointHoverRadius: 5,
-                                pointHoverBackgroundColor: 'rgba(' + that.chartColors[y] + ',1)',
-                                pointHoverBorderColor: 'rgba(220,220,220,1)',
-                                pointHoverBorderWidth: 2,
-                                pointRadius: 1,
-                                pointHitRadius: 10
-                            }
-                            // Put time and value into reData
-                            for (let i = 0; i < that.receivedMsg[x].length; i++) {
-                                reData.data.push({
-                                    x: that.receivedMsg[x][i][0],
-                                    y: that.receivedMsg[y][i][0]
-                                })
-                            }
-                            // If that.chartData.datasets have this reData before, just update it
-                            // Otherwise push new one
-                            let elementPos = that.chartData.datasets.map(function (obj) {
-                                return obj.label
-                            }).indexOf(y)
-                            if (elementPos !== -1) {
-                                that.chartData.datasets[elementPos] = reData
-                            } else {
-                                that.chartData.datasets.push(reData)
-                            }
+                    // Put time and value into reData
+                    for (let i = 0; i < that.receivedMsg[x].length; i++) {
+                        reData.data.push({
+                            x: that.receivedMsg[x][i][0],
+                            y: that.receivedMsg[y][i][0]
                         })
-                        console.log(this.receivedMsg)
-                    } else if (this.receivedMsg['type'] === 'params' &&
-                        this.receivedMsg['status'] === 'success') {
+                    }
+                    // If that.chartData.datasets have this reData before, just update it
+                    // Otherwise push new one
+                    let elementPos = that.chartData.datasets.map(function (obj) {
+                        return obj.label
+                    }).indexOf(y)
+                    if (elementPos !== -1) {
+                        that.chartData.datasets[elementPos] = reData
+                    } else {
+                        that.chartData.datasets.push(reData)
+                    }
+                })
+                console.log(this.receivedMsg)
+            },
+            params: function (data) {
+                this.receivedMsg = data
+                if (data !== null) {
+                    if (this.receivedMsg['status'] === 'success') {
                         document.getElementById('setParams').classList.remove('is-loading')
                     }
                 }
