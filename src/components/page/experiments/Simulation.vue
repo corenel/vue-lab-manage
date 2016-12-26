@@ -59,7 +59,7 @@
                             </modal>
                             <button id="startSim"
                                     v-on:click="startSim()"
-                                    class="button is-danger">Start</button>
+                                    class="button is-success">Start</button>
                         </tab-item>
                         <tab-item title="Quad Tank">
                             That's quad tank simulation.
@@ -120,8 +120,8 @@
                 chartLabels: ['level_1', 'level_2'],
                 chartData: {datasets: []},
                 chartColors: {
-                    'level_1': '220, 220, 220',
-                    'level_2': '151, 187, 205'
+                    'level_1': '91, 193, 244',
+                    'level_2': '69, 211, 225'
                 },
                 chartOptions: {
                     scales: {
@@ -196,12 +196,10 @@
                         that.chartData.datasets.push(reData)
                     }
                 })
-                console.log(this.receivedMsg)
             },
             params: function (data) {
-                this.receivedMsg = data
                 if (data !== null) {
-                    if (this.receivedMsg['status'] === 'success') {
+                    if (data['status'] === 'success') {
                         document.getElementById('setParams').classList.remove('is-loading')
                     }
                 }
