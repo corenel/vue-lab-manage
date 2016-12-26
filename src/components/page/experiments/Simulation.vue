@@ -201,6 +201,7 @@
                 if (data !== null) {
                     if (data['status'] === 'success') {
                         document.getElementById('setParams').classList.remove('is-loading')
+                        this.closeModal()
                     }
                 }
             }
