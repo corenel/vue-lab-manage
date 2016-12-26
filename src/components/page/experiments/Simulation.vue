@@ -19,27 +19,39 @@
                                     class="button is-info">Params</button>
                             <modal v-if="showModal" @close="showModal = false">
                                 <h1 slot="header">Params Panel</h1>
-                                <table slot="body" class="table is-bordered is-striped is-narrow">
-                                    <thead>
-                                    <tr>
-                                        <th> Parameters </th>
-                                        <th> Value</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr v-for="(item, index) in params">
-                                        <td>{{ item.name }}</td>
-                                        <td>
-                                            <p class="control">
-                                                <input v-model="item.value" class="input" placeholder="Input a value">
-                                            </p>
-                                        </td>
-                                    </tr>
-                                    </tbody>
-                                </table>
+                                <div slot="body">
+                                    <label class="label">Control Strategy</label>
+                                    <p class="control">
+                                        <span class="select">
+                                            <select v-model="selectedParams">
+                                              <option v-for="option in ctlParams.coupleTank">
+                                                  {{ option.name }}
+                                              </option>
+                                            </select>
+                                        </span>
+                                    </p>
+                                    <table  class="table is-bordered is-striped is-narrow">
+                                        <thead>
+                                        <tr>
+                                            <th> Parameters </th>
+                                            <th> Value</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr v-for="(item, index) in ctlParams.coupleTank[selectedParams].params">
+                                            <td>{{ item.name }}</td>
+                                            <td>
+                                                <p class="control">
+                                                    <input v-model="item.value" class="input" placeholder="Input a value">
+                                                </p>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
                                 <div slot="footer">
                                     <button id="setParams"
-                                            v-on:click="setParams()"
+                                            v-on:click="setParams('coupleTank')"
                                             class="button is-success">Set</button>
                                     <button v-on:click="closeModal()"
                                             class="button is-info">Close</button>
@@ -100,6 +112,7 @@
     import Chart from '../../ui/Chart.vue'
     import {Tab, TabItem} from '../../ui/Tab'
     import Modal from '../../ui/Modal/Modal.vue'
+    import {ctlParams} from '../../../../config/ctl.params'
     export default{
         data () {
             return {
@@ -119,48 +132,8 @@
                     }
                 },
                 chartChanged: false,
-                params: {
-                    mdl: {
-                        name: 'Model',
-                        value: 'Tank2'
-                    },
-                    StopTime: {
-                        name: 'Stop time',
-                        value: '30'
-                    },
-                    L10: {
-                        name: 'Tank 1 level setpoint',
-                        value: '15'
-                    },
-                    L20: {
-                        name: 'Tank 2 level setpoint',
-                        value: '15'
-                    },
-                    Kp_1: {
-                        name: 'Kp_1',
-                        value: '7.2152'
-                    },
-                    Ki_1: {
-                        name: 'Ki_1',
-                        value: '9.1061'
-                    },
-                    Kff_1: {
-                        name: 'Kff_1',
-                        value: '2.3911'
-                    },
-                    Kp_2: {
-                        name: 'Kp_2',
-                        value: '5.0934'
-                    },
-                    Ki_2: {
-                        name: 'Ki_2',
-                        value: '1.7436'
-                    },
-                    Kff_2: {
-                        name: 'Kff_2',
-                        value: '1'
-                    }
-                },
+                ctlParams,
+                selectedParams: 'PI+FF',
                 showModal: false
             }
         },
@@ -246,12 +219,11 @@
                     name: 'sim'
                 }))
             },
-            setParams: function () {
+            setParams: function (selectedModel) {
                 document.getElementById('setParams').classList.add('is-loading')
-                console.log('a1')
                 this.$socket.emit('toMatlab', JSON.stringify({
                     name: 'params',
-                    data: this.params
+                    data: ctlParams[selectedModel][this.selectedParams].params
                 }))
             },
             closeModal: function () {
