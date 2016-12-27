@@ -10,9 +10,9 @@
                             <p>That's single tank simulation.</p>
                         </tab-item>
                         <tab-item title="Couple Tank">
-                            <p>That's couple tank simulation.</p>
-                            <p>That's couple tank simulation.</p>
-                            <p>That's couple tank simulation.</p>
+                            <p style="text-align:center;">
+                                <img src="../../../assets/img/conf2_PI_FF.png"/>
+                            </p>
                             <button id="show-modal"
                                     class="button">Params</button>
                             <button id="startSim"

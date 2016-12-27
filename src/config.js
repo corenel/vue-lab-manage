@@ -65,6 +65,13 @@ let menu = [
                 component: makeComponent('./components/page/experiments/Real-Plant.vue')
             }
         ]
+    },
+    {
+        path: '/discuss',
+        icon: 'comments',
+        name: 'Discuss',
+        label: 'Discuss',
+        component: makeComponent('./components/page/Discuss.vue')
     }
 ]
 export {menu}
