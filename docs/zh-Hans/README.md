@@ -1,23 +1,27 @@
+---
+nav: zh-Hans
+---
+
 # vue-lab-manage
 
-Doing and managing experiments online.
+在线上完成仿真实验与实物实验！
 
-## Introduction
+## 简介
 
-`vue-lab-manage` is a web-based lab management system using Vue.js. It simply allows you to do simulation and real-plant experiments online without going to the lab. It samrtly reads and excute the `.slx` files with given parameters and finally displays results with charts.
+`vue-lab-manage`是一个使用`Vue.js`开发的基于网页端的实验室管理系统。它能让你直接在网上进行仿真实验与实物实验，而不用跑到实验室去做。`vue-lab-manage`会直接读取并执行服务器上已有的仿真文件，并且加上你自己的参数配置。跑完实验之后，它会显示历史数据并生成图表。
 
 <p class="warning">
 
-Note that it should be used with `matlab-socket` repo as backend.
+需要注意的是本系统必须使用`matlab-socket`作为后端。
 
 </p>
 
-## Preparation
-You must have `Node.js` installed in your system.
+## 安装Node.js
+你必须在需要部署的电脑上安装`Node.js`。
 
-If you're using OS X or Windows, the best way to install `Node.js` is to use one of the installers from the `Node.js` download page. If you're using Linux, you can use the installer, or you can check NodeSource's binary distributions to see whether or not there's a more recent version that works with your system.
+如果你是用的是Windows或者macOS，安装Node.js的最佳方式是去[这里](https://nodejs.org/en/download/)下个安装包。如果你用的是Linux，你可以用自带的包管理软件来安装。
 
-## Quick Start
+## 快速入门
 
 ```bash
 $ git clone https://github.com/corenel/vue-lab-manage.git
@@ -28,7 +32,7 @@ $ npm install
 $ npm run dev
 ```
 
-Note that before this, we need `matlab-socket` as backend:
+注意在启动web server之前，我们需要启动`matlab-socket`这个后端：
 
 ```bash
 $ git clone https://github.com/corenel/matlab-socketio.git
@@ -39,11 +43,11 @@ $ ./matlabStart.sh
 $ node run test
 ```
 
-## Configuration
+## 配置文件
 
-### Port and proxy
+### 端口与代理
 
-In `config/index.js`, you can modify `port` (default is `8082`) and proxy `target` (default is `localhost`).
+在`config/index.js`中可以修改端口`port`(默认`8082`)和代理`target`(默认`localhost`).
 
 ```javascript
   dev: {
@@ -62,9 +66,9 @@ In `config/index.js`, you can modify `port` (default is `8082`) and proxy `targe
   }
 ```
 
-### Pre-difined control parameters
+### 预置的控制参数
 
-In `config/ctl.params.js`, you can modify control parameters in `json` format.
+在`config/ctl.params.js`中可以修改或添加控制参数，注意需要用`json`格式.
 
 ```json
          nnmpc: {
@@ -90,8 +94,8 @@ In `config/ctl.params.js`, you can modify control parameters in `json` format.
          }
 ```
 
-### Router
-In `src/config.js`, you can modify router settings for components.
+### 路由设置
+在`src/config.js`中，你可以设置需要加载的组件。
 
 ```javascript
 import makeComponent from './component-loader'
@@ -140,26 +144,26 @@ export {menu}
 
 ## Development
 
-The development setup is basically `webpack` + `vue.js`:
+进行开发的话使用的是`webpack` + `vue.js`:
 
 ```bash
 $ cd vue-lab-manage
 $ npm run dev
-# then edit files in ./src dir
-# web pages will hot-reload
+# 然后就可以修改 ./src 文件夹中的文件了
+# 修改保存后打开的网页会热加载
 ```
 
-## Contributing
+## 弓箭
 
-1. Fork it!
-2. Create your feature branch: `git checkout -b my-new-feature`
-3. Commit your changes: `git commit -am 'Add some feature'`
-4. Push to the branch: `git push origin my-new-feature`
-5. Submit a pull request :D
+1. 首先当然是Fork
+2. 创建你自己的分支: `git checkout -b my-new-feature`
+3. 提交你的修改: `git commit -am 'Add some feature'`
+4. push到你自己的fork repo上: `git push origin my-new-feature`
+5. 发送一个Pull Request :D
 
-## Tips
+## 提示
 
-You may use `Vue.js devtools` ([download](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)) for debug.
+开发的时候，你可以用`Vue.js devtools` ([download](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd))插件来在Chrome上进行调试。
 
 ## Prior art
 
