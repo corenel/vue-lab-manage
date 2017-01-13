@@ -1,0 +1,3 @@
+# A vue project for lab management
+
+just start writing...

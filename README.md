@@ -1,4 +1,4 @@
-# Vue project for lab management
+# A vue project for lab management
 
 ## Build Setup
 
