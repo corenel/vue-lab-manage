@@ -1,11 +1,11 @@
 <template>
     <section class="section content">
-        <h2>Static</h2>
+        <h2>Welcome to lab management system</h2>
         <div class="columns">
             <div class="column">
                 <div class="notification is-success has-text-centered">
-                    <p class="title">Success</p>
-                    <p class="subtitle">97</p>
+                    <p class="title">Users</p>
+                    <p class="subtitle">2</p>
                 </div>
             </div>
             <div class="column">
@@ -16,13 +16,13 @@
             </div>
             <div class="column">
                 <div class=" notification is-warning has-text-centered">
-                    <p class="title">Waining</p>
-                    <p class="subtitle">48</p>
+                    <p class="title">Devices</p>
+                    <p class="subtitle">6</p>
                 </div>
             </div>
             <div class="column">
                 <div class="notification is-danger has-text-centered">
-                    <p class="title">Threats</p>
+                    <p class="title">Warnings</p>
                     <p class="subtitle">48</p>
                 </div>
             </div>

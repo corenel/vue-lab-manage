@@ -7,9 +7,11 @@
                 <div class="box">
                     <tab :active-index = "0" style= "width: 100%;">
                         <tab-item title="Single Tank">
-                            <p>That's single tank simulation.</p>
-                            <p>When $a \ne 0$, there are two solutions to $ax^2 + bx + c = 0$
-                                and they are \(x = 2a\)</p>
+                            <p style="text-align:center;">
+                                <img src="../../../assets/img/conf1_model.png" width="670"/>
+                            </p>
+                            <p><img src="../../../assets/img/conf1_model_1.png" width="510"/></p>
+                            <p><img src="../../../assets/img/conf1_model_2.png" width="510"/></p>
                         </tab-item>
                         <tab-item title="Couple Tank">
                             <p>That's couple tank simulation.</p>

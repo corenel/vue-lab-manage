@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="601px" height="653px" viewBox="0 0 601 653" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>bstefan_disqus</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="48" height="48" rx="2"></rect>
+        <rect id="path-3" x="60" y="0" width="530" height="48" rx="4"></rect>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="530" height="48" fill="white">
+            <use xlink:href="#path-3"></use>
+        </mask>
+        <rect id="path-5" x="0" y="0" width="48" height="48" rx="2"></rect>
+        <rect id="path-7" x="0" y="0" width="36" height="36" rx="2"></rect>
+        <rect id="path-9" x="0" y="0" width="36" height="36" rx="2"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="disqus">
+            <g id="header" transform="translate(1.000000, 0.000000)">
+                <text id="14-Comments" font-family="HelveticaNeue-Bold, Helvetica Neue" font-size="15" font-weight="bold" fill="#3F4549">
+                    <tspan x="0" y="15">14 Comments</tspan>
+                </text>
+                <text id="The-Lab-Blog" font-family="HelveticaNeue-Bold, Helvetica Neue" font-size="15" font-weight="bold" fill="#A7B4BA">
+                    <tspan x="129" y="15">The Lab Blog</tspan>
+                </text>
+                <rect id="Rectangle-378" fill="#EBEEF0" x="0" y="29" width="600" height="2"></rect>
+                <rect id="Rectangle-379" fill="#2E9FFF" x="0" y="29" width="100" height="2"></rect>
+                <text id="Sort-by-Best" font-family="HelveticaNeue-Bold, Helvetica Neue" font-size="13" font-weight="bold" fill="#A7B4BA">
+                    <tspan x="0" y="54">Sort by Best</tspan>
+                </text>
+                <polygon id="Triangle-7" fill="#B2B2B2" points="85 49 89 53 81 53"></polygon>
+                <text id="Share" font-family="HelveticaNeue-Bold, Helvetica Neue" font-size="13" font-weight="bold" fill="#A7B4BA">
+                    <tspan x="451" y="54">Share</tspan>
+                </text>
+                <polygon id="Path-24" fill="#A7B4BA" points="501 43 500 45 496 45 496 54 504 54 507 51 507 56 494 56 494 43"></polygon>
+                <path d="M502.915875,43 L507.998995,48 L502.915875,53 L502.915875,49.3636364 C502.915875,49.3636364 498.877262,49.0254854 496.998995,52.0909091 C497.015969,51.7942156 496.998995,46.6363637 502.915875,46.6363636 C502.915875,44.9868608 502.915875,43 502.915875,43 Z" id="Path-23" fill="#A7B4BA"></path>
+                <text id="Favorite" font-family="HelveticaNeue-Bold, Helvetica Neue" font-size="13" font-weight="bold" fill="#A7B4BA">
+                    <tspan x="521" y="54">Favorite</tspan>
+                </text>
+                <polygon id="Star-1" fill="#A7B4BA" points="583 52 578 56 580 50 576 47 581 47 583 41 585 47 591 47 586 50 588 56"></polygon>
+            </g>
+            <g id="add-comment" transform="translate(1.000000, 80.000000)">
+                <g id="avatar">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use id="Mask" fill="#E2E7EA" fill-rule="evenodd" xlink:href="#path-1"></use>
+                    <ellipse id="Oval-59" fill="#949EA6" fill-rule="evenodd" mask="url(#mask-2)" cx="24.5" cy="21.5" rx="13.5" ry="14.5"></ellipse>
+                    <ellipse id="Oval-60" fill="#949EA6" fill-rule="evenodd" mask="url(#mask-2)" cx="24.5" cy="60" rx="29.5" ry="22"></ellipse>
+                </g>
+                <use id="Rectangle-381" stroke="#B6C1C7" mask="url(#mask-4)" stroke-width="4" fill="#FFFFFF" xlink:href="#path-3"></use>
+                <text id="Join-the-discussion…" font-family="HelveticaNeue, Helvetica Neue" font-size="18" font-weight="normal" fill-opacity="0.35" fill="#00273B">
+                    <tspan x="72" y="30">Join the discussion…</tspan>
+                </text>
+            </g>
+            <g id="comment" transform="translate(1.000000, 150.000000)">
+                <g id="avatar" transform="translate(0.000000, 1.000000)">
+                    <mask id="mask-6" fill="white">
+                        <use xlink:href="#path-5"></use>
+                    </mask>
+                    <use id="Mask" fill="#E2E7EA" fill-rule="evenodd" xlink:href="#path-5"></use>
+                    <ellipse id="Oval-59" fill="#949EA6" fill-rule="evenodd" mask="url(#mask-6)" cx="24.5" cy="21.5" rx="13.5" ry="14.5"></ellipse>
+                    <ellipse id="Oval-60" fill="#949EA6" fill-rule="evenodd" mask="url(#mask-6)" cx="24.5" cy="60" rx="29.5" ry="22"></ellipse>
+                </g>
+                <text id="Yusu-Pan" font-family="HelveticaNeue-Bold, Helvetica Neue" font-size="13" font-weight="bold" line-spacing="21" fill="#2E9FFF">
+                    <tspan x="60" y="13">Yusu Pan</tspan>
+                </text>
+                <circle id="Oval-65" fill="#CCCCCC" cx="131.5" cy="9.5" r="1.5"></circle>
+                <text id="19-days-ago" font-family="HelveticaNeue, Helvetica Neue" font-size="13" font-weight="normal" line-spacing="21" fill="#A7B4BA">
+                    <tspan x="139" y="12">19 days ago</tspan>
+                </text>
+                <text id="I-believe-any,-and-a" font-family="HelveticaNeue, Helvetica Neue" font-size="15" font-weight="normal" line-spacing="21" fill="#3F4549">
+                    <tspan x="60" y="35">I believe any, and all genuine efforts of giving in all its various</tspan>
+                    <tspan x="60" y="56.4199982">facets, whether its winter attire, and providing housing for the many homeless </tspan>
+                    <tspan x="60" y="77.8399963">women and men of many communities, to providing toys for deprived and </tspan>
+                    <tspan x="60" y="99.2599945">unfortunate children of many various communities,</tspan>
+                    <tspan x="60" y="120.679993">giving in all its forms can only serve to perpetuate a continuing vitality and </tspan>
+                    <tspan x="60" y="142.099991">vibrant sustainable community. I applaud and commend efforts of charity, and </tspan>
+                    <tspan x="60" y="163.519989">all efforts true giving…</tspan>
+                </text>
+                <text id="I-only-hope-we-can-a" font-family="HelveticaNeue, Helvetica Neue" font-size="15" font-weight="normal" line-spacing="21" fill="#3F4549">
+                    <tspan x="60" y="198">I only hope we can always... think of others...and dimish selfishness</tspan>
+                </text>
+                <g id="options" transform="translate(60.000000, 211.000000)">
+                    <text id="9" font-family="HelveticaNeue, Helvetica Neue" font-size="13" font-weight="normal" fill-opacity="0.35" fill="#00273B">
+                        <tspan x="0" y="12">9</tspan>
+                    </text>
+                    <path d="M19,4.66476317 C18.604032,4.49481183 18.1303139,4.59722053 17.8390416,4.94434528 L14.6288695,8.7700795 C14.2656636,9.20293137 14.3271687,9.82615376 14.7502434,10.1811556 C15.1762676,10.5386324 15.8049166,10.4799687 16.1609584,10.0556547 L19,6.67221664 L21.8390416,10.0556547 C22.1950834,10.4799687 22.8237324,10.5386324 23.2497566,10.1811556 C23.6728313,9.82615376 23.7343364,9.20293137 23.3711305,8.7700795 L20.1609584,4.94434528 C19.8696861,4.59722053 19.395968,4.49481183 19,4.66476317 Z" id="Rectangle-383" fill="#A7B4BA" fill-rule="evenodd"></path>
+                    <rect id="Rectangle-387" fill="#EBEEF0" fill-rule="evenodd" x="34" y="0" width="2" height="14"></rect>
+                    <path d="M50,4.66476317 C49.604032,4.49481183 49.1303139,4.59722053 48.8390416,4.94434528 L45.6288695,8.7700795 C45.2656636,9.20293137 45.3271687,9.82615376 45.7502434,10.1811556 C46.1762676,10.5386324 46.8049166,10.4799687 47.1609584,10.0556547 L50,6.67221664 L52.8390416,10.0556547 C53.1950834,10.4799687 53.8237324,10.5386324 54.2497566,10.1811556 C54.6728313,9.82615376 54.7343364,9.20293137 54.3711305,8.7700795 L51.1609584,4.94434528 C50.8696861,4.59722053 50.395968,4.49481183 50,4.66476317 Z" id="Rectangle-385" fill="#A7B4BA" fill-rule="evenodd" transform="translate(50.000000, 7.500000) scale(1, -1) translate(-50.000000, -7.500000) "></path>
+                    <circle id="Oval-64" fill="#CCCCCC" fill-rule="evenodd" cx="66.5" cy="8.5" r="1.5"></circle>
+                    <text id="Reply" font-family="HelveticaNeue, Helvetica Neue" font-size="13" font-weight="normal" fill-opacity="0.35" fill="#00273B">
+                        <tspan x="76" y="12">Reply</tspan>
+                    </text>
+                    <circle id="Oval-63" fill="#CCCCCC" fill-rule="evenodd" cx="118.5" cy="8.5" r="1.5"></circle>
+                    <text id="Share" font-family="HelveticaNeue, Helvetica Neue" font-size="13" font-weight="normal" fill-opacity="0.35" fill="#00273B">
+                        <tspan x="127" y="12">Share</tspan>
+                    </text>
+                    <path d="M168.394403,6.63675771 C168.136366,6.52600732 167.827663,6.59274292 167.637853,6.81895001 L165.545914,9.31202559 C165.318195,9.5834106 165.349308,10.0002263 165.625009,10.2315665 C165.902632,10.4645196 166.312297,10.4262909 166.544314,10.1497827 L168.394403,7.94493359 L170.244491,10.1497827 C170.476509,10.4262909 170.886174,10.4645196 171.163796,10.2315665 C171.439497,10.0002263 171.47061,9.5834106 171.242891,9.31202559 L169.150952,6.81895001 C168.961142,6.59274292 168.652439,6.52600732 168.394403,6.63675771 Z" id="Rectangle-386" fill="#A7B4BA" fill-rule="evenodd" transform="translate(168.394403, 8.484366) scale(-1, -1) rotate(-90.000000) translate(-168.394403, -8.484366) "></path>
+                </g>
+            </g>
+            <g id="reply" transform="translate(61.000000, 399.000000)">
+                <g id="avatar_small">
+                    <mask id="mask-8" fill="white">
+                        <use xlink:href="#path-7"></use>
+                    </mask>
+                    <use id="Mask" fill="#E2E7EA" fill-rule="evenodd" xlink:href="#path-7"></use>
+                    <ellipse id="Oval-59" fill="#949EA6" fill-rule="evenodd" mask="url(#mask-8)" cx="18.375" cy="16.125" rx="10.125" ry="10.875"></ellipse>
+                    <ellipse id="Oval-60" fill="#949EA6" fill-rule="evenodd" mask="url(#mask-8)" cx="18.375" cy="45" rx="22.125" ry="16.5"></ellipse>
+                </g>
+                <text id="Feng" font-family="HelveticaNeue-Bold, Helvetica Neue" font-size="13" font-weight="bold" line-spacing="21" fill="#2E9FFF">
+                    <tspan x="47" y="13">Feng</tspan>
+                </text>
+                <rect id="Rectangle-398" fill="#BDC5C9" x="89" y="2" width="44" height="14" rx="3"></rect>
+                <text id="Teacher" font-family="HelveticaNeue-Bold, Helvetica Neue" font-size="10" font-weight="bold" fill="#FFFFFF">
+                    <tspan x="92" y="12">Teacher</tspan>
+                </text>
+                <path d="M141.455128,4 L147.00065,9 L141.455128,14 L141.455128,10.3636364 C141.455128,10.3636364 137.049129,10.0254854 135,13.0909091 C135.018517,12.7942156 135,7.63636374 141.455128,7.63636364 C141.455128,5.98686075 141.455128,4 141.455128,4 Z" id="Path-21" fill="#A7B4BA"></path>
+                <text id="Yusu-Pan" font-family="HelveticaNeue, Helvetica Neue" font-size="13" font-weight="normal" line-spacing="21" fill="#A7B4BA">
+                    <tspan x="153" y="13">Yusu Pan</tspan>
+                </text>
+                <circle id="Oval-65" fill="#CCCCCC" cx="219.5" cy="8.5" r="1.5"></circle>
+                <text id="19-days-ago" font-family="HelveticaNeue, Helvetica Neue" font-size="13" font-weight="normal" line-spacing="21" fill="#A7B4BA">
+                    <tspan x="227" y="13">19 days ago</tspan>
+                </text>
+                <text id="I-agree,-@Yusu-Pan." font-family="HelveticaNeue, Helvetica Neue" font-size="15" font-weight="normal" line-spacing="21">
+                    <tspan x="48" y="35" fill="#3F4549">I agree, </tspan>
+                    <tspan x="101.895" y="35" font-family="HelveticaNeue-Bold, Helvetica Neue" font-weight="bold" fill="#2E9FFF">@Yusu Pan.</tspan>
+                    <tspan x="184.485" y="35" fill="#3F4549"> It's important to recognize that the world is bigger </tspan>
+                    <tspan x="48" y="56.4351044" fill="#3F4549">than just our own individual lives - every little bit counts.</tspan>
+                    <tspan x="48" y="77.8551025" fill="#3F4549">		</tspan>
+                </text>
+                <g id="options" transform="translate(47.000000, 65.000000)">
+                    <text id="9" font-family="HelveticaNeue, Helvetica Neue" font-size="13" font-weight="normal" fill-opacity="0.35" fill="#00273B">
+                        <tspan x="0" y="12">9</tspan>
+                    </text>
+                    <path d="M19,4.66476317 C18.604032,4.49481183 18.1303139,4.59722053 17.8390416,4.94434528 L14.6288695,8.7700795 C14.2656636,9.20293137 14.3271687,9.82615376 14.7502434,10.1811556 C15.1762676,10.5386324 15.8049166,10.4799687 16.1609584,10.0556547 L19,6.67221664 L21.8390416,10.0556547 C22.1950834,10.4799687 22.8237324,10.5386324 23.2497566,10.1811556 C23.6728313,9.82615376 23.7343364,9.20293137 23.3711305,8.7700795 L20.1609584,4.94434528 C19.8696861,4.59722053 19.395968,4.49481183 19,4.66476317 Z" id="Rectangle-383" fill="#A7B4BA" fill-rule="evenodd"></path>
+                    <rect id="Rectangle-387" fill="#EBEEF0" fill-rule="evenodd" x="34" y="0" width="2" height="14"></rect>
+                    <path d="M50,4.66476317 C49.604032,4.49481183 49.1303139,4.59722053 48.8390416,4.94434528 L45.6288695,8.7700795 C45.2656636,9.20293137 45.3271687,9.82615376 45.7502434,10.1811556 C46.1762676,10.5386324 46.8049166,10.4799687 47.1609584,10.0556547 L50,6.67221664 L52.8390416,10.0556547 C53.1950834,10.4799687 53.8237324,10.5386324 54.2497566,10.1811556 C54.6728313,9.82615376 54.7343364,9.20293137 54.3711305,8.7700795 L51.1609584,4.94434528 C50.8696861,4.59722053 50.395968,4.49481183 50,4.66476317 Z" id="Rectangle-385" fill="#A7B4BA" fill-rule="evenodd" transform="translate(50.000000, 7.500000) scale(1, -1) translate(-50.000000, -7.500000) "></path>
+                    <circle id="Oval-64" fill="#CCCCCC" fill-rule="evenodd" cx="66.5" cy="8.5" r="1.5"></circle>
+                    <text id="Reply" font-family="HelveticaNeue, Helvetica Neue" font-size="13" font-weight="normal" fill-opacity="0.35" fill="#00273B">
+                        <tspan x="76" y="12">Reply</tspan>
+                    </text>
+                    <circle id="Oval-63" fill="#CCCCCC" fill-rule="evenodd" cx="118.5" cy="8.5" r="1.5"></circle>
+                    <text id="Share" font-family="HelveticaNeue, Helvetica Neue" font-size="13" font-weight="normal" fill-opacity="0.35" fill="#00273B">
+                        <tspan x="127" y="12">Share</tspan>
+                    </text>
+                    <path d="M168.394403,6.63675771 C168.136366,6.52600732 167.827663,6.59274292 167.637853,6.81895001 L165.545914,9.31202559 C165.318195,9.5834106 165.349308,10.0002263 165.625009,10.2315665 C165.902632,10.4645196 166.312297,10.4262909 166.544314,10.1497827 L168.394403,7.94493359 L170.244491,10.1497827 C170.476509,10.4262909 170.886174,10.4645196 171.163796,10.2315665 C171.439497,10.0002263 171.47061,9.5834106 171.242891,9.31202559 L169.150952,6.81895001 C168.961142,6.59274292 168.652439,6.52600732 168.394403,6.63675771 Z" id="Rectangle-386" fill="#A7B4BA" fill-rule="evenodd" transform="translate(168.394403, 8.484366) scale(-1, -1) rotate(-90.000000) translate(-168.394403, -8.484366) "></path>
+                </g>
+            </g>
+            <g id="reply-to-reply" transform="translate(109.000000, 504.000000)">
+                <g id="avatar_small">
+                    <mask id="mask-10" fill="white">
+                        <use xlink:href="#path-9"></use>
+                    </mask>
+                    <use id="Mask" fill="#E2E7EA" fill-rule="evenodd" xlink:href="#path-9"></use>
+                    <ellipse id="Oval-59" fill="#949EA6" fill-rule="evenodd" mask="url(#mask-10)" cx="18.375" cy="16.125" rx="10.125" ry="10.875"></ellipse>
+                    <ellipse id="Oval-60" fill="#949EA6" fill-rule="evenodd" mask="url(#mask-10)" cx="18.375" cy="45" rx="22.125" ry="16.5"></ellipse>
+                </g>
+                <text id="Yusu-Pan" font-family="HelveticaNeue-Bold, Helvetica Neue" font-size="13" font-weight="bold" line-spacing="21" fill="#2E9FFF">
+                    <tspan x="47" y="13">Yusu Pan</tspan>
+                </text>
+                <path d="M116.455128,3 L122.00065,8 L116.455128,13 L116.455128,9.36363636 C116.455128,9.36363636 112.049129,9.02548535 110,12.0909091 C110.018517,11.7942156 110,6.63636374 116.455128,6.63636364 C116.455128,4.98686075 116.455128,3 116.455128,3 Z" id="Path-21" fill="#A7B4BA"></path>
+                <text id="Feng" font-family="HelveticaNeue, Helvetica Neue" font-size="13" font-weight="normal" line-spacing="21" fill="#A7B4BA">
+                    <tspan x="125" y="12">Feng</tspan>
+                </text>
+                <circle id="Oval-65" fill="#CCCCCC" cx="167.5" cy="7.5" r="1.5"></circle>
+                <text id="19-days-ago" font-family="HelveticaNeue, Helvetica Neue" font-size="13" font-weight="normal" line-spacing="21" fill="#A7B4BA">
+                    <tspan x="175" y="12">19 days ago</tspan>
+                </text>
+                <text id="Thank-you-very-much-" font-family="HelveticaNeue, Helvetica Neue" font-size="15" font-weight="normal" line-spacing="21" fill="#3F4549">
+                    <tspan x="48" y="35">Thank you very much for your comment, I appreciate it, and it is </tspan>
+                    <tspan x="48" y="56.4199982">very true that this world is bigger than our individual lives, and </tspan>
+                    <tspan x="48" y="77.8399963">every bit indeed does count, well said..., I believe that our lives </tspan>
+                    <tspan x="48" y="99.2599945">should be a eternal endowment to others as we live..., and as </tspan>
+                    <tspan x="48" y="120.679993">we live... we can live for another...		</tspan>
+                </text>
+                <g id="options" transform="translate(47.000000, 130.000000)">
+                    <text id="9" font-family="HelveticaNeue, Helvetica Neue" font-size="13" font-weight="normal" fill-opacity="0.35" fill="#00273B">
+                        <tspan x="0" y="12">9</tspan>
+                    </text>
+                    <path d="M19,4.66476317 C18.604032,4.49481183 18.1303139,4.59722053 17.8390416,4.94434528 L14.6288695,8.7700795 C14.2656636,9.20293137 14.3271687,9.82615376 14.7502434,10.1811556 C15.1762676,10.5386324 15.8049166,10.4799687 16.1609584,10.0556547 L19,6.67221664 L21.8390416,10.0556547 C22.1950834,10.4799687 22.8237324,10.5386324 23.2497566,10.1811556 C23.6728313,9.82615376 23.7343364,9.20293137 23.3711305,8.7700795 L20.1609584,4.94434528 C19.8696861,4.59722053 19.395968,4.49481183 19,4.66476317 Z" id="Rectangle-383" fill="#A7B4BA" fill-rule="evenodd"></path>
+                    <rect id="Rectangle-387" fill="#EBEEF0" fill-rule="evenodd" x="34" y="0" width="2" height="14"></rect>
+                    <path d="M50,4.66476317 C49.604032,4.49481183 49.1303139,4.59722053 48.8390416,4.94434528 L45.6288695,8.7700795 C45.2656636,9.20293137 45.3271687,9.82615376 45.7502434,10.1811556 C46.1762676,10.5386324 46.8049166,10.4799687 47.1609584,10.0556547 L50,6.67221664 L52.8390416,10.0556547 C53.1950834,10.4799687 53.8237324,10.5386324 54.2497566,10.1811556 C54.6728313,9.82615376 54.7343364,9.20293137 54.3711305,8.7700795 L51.1609584,4.94434528 C50.8696861,4.59722053 50.395968,4.49481183 50,4.66476317 Z" id="Rectangle-385" fill="#A7B4BA" fill-rule="evenodd" transform="translate(50.000000, 7.500000) scale(1, -1) translate(-50.000000, -7.500000) "></path>
+                    <circle id="Oval-64" fill="#CCCCCC" fill-rule="evenodd" cx="66.5" cy="8.5" r="1.5"></circle>
+                    <text id="Reply" font-family="HelveticaNeue, Helvetica Neue" font-size="13" font-weight="normal" fill-opacity="0.35" fill="#00273B">
+                        <tspan x="76" y="12">Reply</tspan>
+                    </text>
+                    <circle id="Oval-63" fill="#CCCCCC" fill-rule="evenodd" cx="118.5" cy="8.5" r="1.5"></circle>
+                    <text id="Share" font-family="HelveticaNeue, Helvetica Neue" font-size="13" font-weight="normal" fill-opacity="0.35" fill="#00273B">
+                        <tspan x="127" y="12">Share</tspan>
+                    </text>
+                    <path d="M168.394403,6.63675771 C168.136366,6.52600732 167.827663,6.59274292 167.637853,6.81895001 L165.545914,9.31202559 C165.318195,9.5834106 165.349308,10.0002263 165.625009,10.2315665 C165.902632,10.4645196 166.312297,10.4262909 166.544314,10.1497827 L168.394403,7.94493359 L170.244491,10.1497827 C170.476509,10.4262909 170.886174,10.4645196 171.163796,10.2315665 C171.439497,10.0002263 171.47061,9.5834106 171.242891,9.31202559 L169.150952,6.81895001 C168.961142,6.59274292 168.652439,6.52600732 168.394403,6.63675771 Z" id="Rectangle-386" fill="#A7B4BA" fill-rule="evenodd" transform="translate(168.394403, 8.484366) scale(-1, -1) rotate(-90.000000) translate(-168.394403, -8.484366) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

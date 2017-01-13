@@ -11,9 +11,9 @@
                             That's single tank simulation.
                         </tab-item>
                         <tab-item title="Couple Tank">
-                            <p>That's couple tank simulation.</p>
-                            <p>That's couple tank simulation.</p>
-                            <p>That's couple tank simulation.</p>
+                            <p style="text-align:center;">
+                                <img src="../../../assets/img/conf2_sim_PI_FF.png"/>
+                            </p>
                             <button id="show-modal"
                                     v-on:click="showModal = true"
                                     class="button is-info">Params</button>
@@ -102,10 +102,10 @@
 </template>
 <style>
     #show-modal {
-        margin: 10px 0;
+        margin: 10px 0 0 0;
     }
     #startSim {
-        margin: 10px 0;
+        margin: 10px 0 0 0;
     }
 </style>
 <script>
