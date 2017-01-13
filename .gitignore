@@ -11,3 +11,5 @@ index.html
 *.sublime-project
 *.sublime-workspace
 .tern-project
+!doc/dist
+!doc/index.html
