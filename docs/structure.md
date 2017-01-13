@@ -18,6 +18,6 @@ The structure of the entire site consists of the following three parts:
 
 <p class="warning">
 
-Under construction. Please see [chinese docs](/#/zh-Hans/structure).
+Under construction. Please see <a href="#" router-link="/zh-Hans/structure">chinese docs</a>.
 
 </p>
