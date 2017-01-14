@@ -153,8 +153,7 @@ $ npm run dev
 # 修改保存后打开的网页会热加载
 ```
 
-## 弓箭
-
+## 贡献
 1. 首先当然是Fork
 2. 创建你自己的分支: `git checkout -b my-new-feature`
 3. 提交你的修改: `git commit -am 'Add some feature'`
