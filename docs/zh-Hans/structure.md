@@ -433,9 +433,6 @@ nav: zh-Hans
 `build/dev-server.js`中主要是开启了socket.io的服务器，并监听和转发来自Matlab端与Web Client的消息。
 
 ```javascript
-// src/main.js
-Vue.use(VueSocketio, 'localhost:1234/client')
-
 // build/dev-server.js
 var io = require('socket.io')(1234)
 var matlabServer = io.of('/matlab')
